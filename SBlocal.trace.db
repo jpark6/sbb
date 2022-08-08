@@ -1,0 +1,6 @@
+2022-08-08 14:31:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]QUESTION"; SQL statement:
+SELECT * QUESTION [42000-214]
+2022-08-08 14:31:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]QUESTION"; SQL statement:
+SELECT * QUESTION [42000-214]
