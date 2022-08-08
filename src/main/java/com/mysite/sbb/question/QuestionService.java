@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import java.util.Optional;
 import com.mysite.sbb.exception.DataNotFoundException;
+import com.mysite.sbb.question.Question.QuestionBuilder;
 
 
 @RequiredArgsConstructor
@@ -25,5 +26,12 @@ public class QuestionService {
         }
     }
 
+    public void create(String subject, String content) {
+        Question q = Question.builder()
+                             .subject(subject)
+                             .content(content)
+                             .build();
+        this.questionRepository.save(q);
+    }
 }
 

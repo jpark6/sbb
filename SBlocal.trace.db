@@ -4,3 +4,7 @@ SELECT * QUESTION [42000-214]
 2022-08-08 14:31:48 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * [*]QUESTION"; SQL statement:
 SELECT * QUESTION [42000-214]
+2022-08-08 19:29:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "QEUSTION" not found; SQL statement:
+delete qeustion
+where id = 5 [42102-214]

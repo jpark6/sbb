@@ -1,7 +1,11 @@
+.form-control {
+  border-radius: 0;
+}
 textarea.form-control {
   border-radius: 0;
 }
 
 input[type=submit] {
   margin-top: 10px;
+  border-radius: 0;
 }
