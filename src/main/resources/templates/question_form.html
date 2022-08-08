@@ -9,7 +9,7 @@
         </div>
         <div class="mb-3">
             <label for="content" class="form-label" th:text="Content" />
-            <textarea th:filed="*{content}" class="form-control" rows="10"></textarea>
+            <textarea th:field="*{content}" class="form-control" rows="10" />
         </div>
         <input type="submit" value="SAVE" class="btn btn-primary" />
         <a th:href="@{/question/list}" class="btn btn-secondary" th:text="Back">bb</a>
