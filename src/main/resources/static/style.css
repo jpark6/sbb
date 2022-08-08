@@ -1,0 +1,7 @@
+textarea.form-control {
+  border-radius: 0;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+}
