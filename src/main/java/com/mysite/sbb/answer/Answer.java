@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.mysite.sbb.question.Question;
+import com.mysite.sbb.user.SiteUser;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -36,10 +37,14 @@ public class Answer {
     @ManyToOne
     private Question question;
 
+    @ManyToOne
+    private SiteUser author;
+
     @Builder
-    public Answer(String content, Question question) {
+    public Answer(String content, Question question, SiteUser author) {
         this.content = content;
         this.question = question;
+        this.author = author;
         this.createDate = LocalDateTime.now();
     }
 }

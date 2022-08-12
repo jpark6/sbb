@@ -3,6 +3,7 @@ package com.mysite.sbb.question;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysite.sbb.user.SiteUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -31,10 +32,11 @@ public class QuestionService {
         }
     }
 
-    public void create(String subject, String content) {
+    public void create(String subject, String content, SiteUser user) {
         Question q = Question.builder()
                              .subject(subject)
                              .content(content)
+                             .author(user)
                              .build();
         this.questionRepository.save(q);
     }

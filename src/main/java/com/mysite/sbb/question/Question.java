@@ -3,6 +3,8 @@ package com.mysite.sbb.question;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.mysite.sbb.user.SiteUser;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import com.mysite.sbb.answer.Answer;
 
 import lombok.Builder;
@@ -37,10 +40,14 @@ public class Question {
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
 
+    @ManyToOne
+    private SiteUser author;
+
     @Builder
-    public Question(String subject, String content) {
+    public Question(String subject, String content, SiteUser author) {
         this.subject = subject;
         this.content = content;
+        this.author = author;
         this.createDate = LocalDateTime.now();
     }
 }
