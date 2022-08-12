@@ -24,7 +24,7 @@ public class QuestionController {
     
     Page<Question> paging =  this.questionService.getList(page > 1 ? page-1 : 0);
     int totalPages = paging.getTotalPages();
-    if(totalPages <= page) {
+    if(totalPages != 0 && totalPages <= page) {
       page = totalPages - 1;
       paging =  this.questionService.getList(page);
     }
