@@ -1,7 +1,6 @@
 package com.mysite.sbb.question;
 
 import com.mysite.sbb.answer.AnswerForm;
-import java.util.List;
 import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
 import org.springframework.data.domain.Page;
